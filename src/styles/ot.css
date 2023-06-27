@@ -1,0 +1,87 @@
+/* border box */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Source Serif Pro', serif;
+    margin:0 auto;
+    padding: 1em;
+    max-width: 69ch;
+    height: 100%;
+    line-height: 1.4;
+    background: #0e0613 url("/assets/bg.png");
+    color: #eeeeee;
+}
+p {
+    padding: 0.8ch;
+}
+a {
+	color:#d199ff;
+}
+a:visited {
+	color:#f188ff;
+}
+.section {
+    display: block;
+    padding: 2%;
+    margin: 2% auto;
+    border-width: 3px;
+    max-width: 69ch;
+    border: 2px ridge;
+    border-color: #27123b;
+    background-color: #0e0613; /* if no gradient support */
+    background-image: linear-gradient(to right, 
+                rgb(15, 10, 15), 
+                rgb(14, 10, 17), 
+                rgb(14, 10, 17), 
+                rgb(14, 10, 17), 
+                rgb(15, 10, 15));
+}
+h1,h2,h3 {
+    color:#f2e6fe;
+    line-height: 1.2;
+}
+.video-container {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 56.25%; /* creates a 16:9 aspect ratio */
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+.video-wrap {
+    width: 100%;
+    max-width: 600px;
+}
+.steam-container {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 28%;
+}
+.steam-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+.steam-wrap {
+    width: 100%;
+    max-width: 725px;
+}
+iframe#radio {
+    border: 4px inset;
+    background-color: #070D13;
+    padding: 16px;
+    margin: 4% auto;
+}

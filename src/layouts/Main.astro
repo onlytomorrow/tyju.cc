@@ -1,0 +1,19 @@
+---
+import '@fontsource/source-serif-pro';
+import '../styles/ot.css';
+import Nav from "../components/Nav.astro"
+import Webring from "../components/Webring.astro"
+const { heading } = Astro.props;
+---
+
+<script type="module" src="/app.js"></script>
+
+<html>
+    <body>
+        <Nav heading={heading}/>
+        <main id="swup" class="wrapper">
+            <slot />
+        </main>
+        <Webring />
+    </body>    
+</html>

@@ -1,81 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Main.astro"
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout heading="tyju.cc">
+	<div class="section">
+    <center><h2>About</h2></center>
+		<p>This is the top secret personal website of tyjubi, also known as vfjekgd and KirbyGamer67 on Steam. I also used to go by 'Calculator', or 'karukureita'. I like using a lot of different names online, but real ones refer to me as Vince. 'tyjubi' is 'yukino' shifted one key to the left each on qwerty. I made a game with RPGMaker VX Ace called 'The Adventures of Crackhead Jack', and released an enhanced version on Steam dubbed the 'Overdose Edition' for $5. My more public-facing site for my indie games are over at <a href="https://onlytomorrow.net">https://onlytomorrow.net</a>.</p>
+		<p>I'm currently working on an incremental game called 'Idlenet' made with LOVE2D (Lua). The game will eventually be open source in addition to being released on itch.io, Steam, and web browsers.</p>
+		<p>I also run a private 'vanilla' Minecraft server called 'Admin Abusecraft'. It's been running since 2016, and is currently on its 8th world. If you're curious, previous worlds can be viewed/downloaded here.</p>
+		<p>Programming shit is my hobby, and it's usually video games because they're art.</p>
+	</div>
+	<div class="section">
+	<center>
+		<a href="https://twitter.com/ibujyt">twitter</a>
+		<a href="https://www.youtube.com/@karukureita4732">youtube</a>
+		<a href="https://github.com/onlytomorrow">github</a>
+		<hr style="width: 50%; color: #918bb9"/>
+		<a href="https://steamcommunity.com/id/vfjekgd">steam</a>
+		<a href="https://onlytomorrow.net/acdl">abusecraft</a>
+		<a href="https://onlytomorrow.net">onlytomorrow</a>
+		<a href="https://vfjekgd.gamejolt.io">gamejolt</a>
+	</center>
+	</div>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
