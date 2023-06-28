@@ -1,19 +1,72 @@
 ---
 import '@fontsource/source-serif-pro';
 import '../styles/ot.css';
-import Nav from "../components/Nav.astro"
-import Webring from "../components/Webring.astro"
-const { heading } = Astro.props;
+import Nav from "../components/Nav.astro";
+import Webring from "../components/Webring.astro";
+const { heading, title, description } = Astro.props;
 ---
 
-<script type="module" src="/app.js"></script>
+<script>
+import Swup from 'swup';
+import SwupFadeTheme from '@swup/fade-theme';
+const swup = new Swup({
+    plugins: [new SwupFadeTheme()],
+});
+</script>
 
 <html>
+    <head>
+        <!-- Global Metadata -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="icon" type="image/jpg" href="/favicon.jpeg" />
+        <meta name="generator" content={Astro.generator} />
+
+        <!-- Primary Meta Tags -->
+        <title>{title} &#124; tyju.cc</title>
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={new URL("/embed.jpg", Astro.url)} />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={Astro.url} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={new URL("/embed.jpg", Astro.url)} />
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    </head>
+    <Nav />
     <body>
-        <Nav heading={heading}/>
         <main id="swup" class="wrapper">
+            <h3>{heading}</h3>
             <slot />
         </main>
-        <Webring />
     </body>    
+    <Webring />
 </html>
+
+<style>
+    h2, h3, h4 {
+        display: block;
+        text-align: left;
+        padding: 2%;
+        margin: 0 auto;
+        border-width: 3px;
+        border-style: ridge none;
+        border-color: #27123b;
+        background-color: #0e0613; /* if no gradient support */
+        background-image: linear-gradient(to right, 
+                    rgba(13, 10, 15, 0.2), 
+                    rgb(20, 15, 25), 
+                    rgb(20, 15, 25),  
+                    rgb(20, 15, 25),
+                    rgba(13, 10, 15, 0.2));
+    }
+</style>

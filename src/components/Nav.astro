@@ -1,38 +1,29 @@
----
-const { heading } = Astro.props;
----
-
-<center>
-    <h1>{heading}</h1>
-    <div class="nav">
-        <a class="social" href="/">Home</a>
-        <a class="social" href="/projects/">Projects</a>
-    </div>
-</center>
+<div class="nav">
+    <br/>
+    <h1>tyju.cc</h1>
+    <a class="social" href="/">Home</a>
+    <a class="social" href="/projects/">Projects</a>
+</div>  
 
 <style>
+h1 {
+    display: inline;
+    vertical-align: middle;
+    text-align: left;
+    padding: 0% 2% 0% 0%;
+}
 .nav {
-    display: block;
     padding: 2%;
-    margin: 2% auto;
-    border-width: 3px;
-    max-width: 69ch;
-    border-style: ridge none;
-    border-color: #27123b;
-    background-color: #0e0613; /* if no gradient support */
-    background-image: linear-gradient(to right, 
-                rgba(13, 10, 15, 0.2), 
-                rgb(20, 15, 25), 
-                rgb(20, 15, 25),  
-                rgb(20, 15, 25),
-                rgba(13, 10, 15, 0.2));
 }
 a, a:visited {
+    padding: 0.4ch;
     color: #eeeeee;
+    text-decoration: none;
     border: 1px solid #4e386a;
     background-color: #1c1532;
-    padding: 4px 6px;
-    line-height: 1.2;
-    text-decoration: none;
+}
+a:hover {
+    color: #eeb7ff;
+    background-color: hsl(253, 15%, 30%);
 }
 </style>
