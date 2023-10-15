@@ -11,10 +11,11 @@
   },
   "dependencies": {
     "@fontsource/source-serif-pro": "^5.0.3",
-    "astro": "^2.7.0"
+    "astro": "^3.3.0"
   },
   "devDependencies": {
-    "@swup/fade-theme": "^1.0.5",
-    "swup": "^3.1.1"
+    "@swup/fade-theme": "^2.0.0",
+    "@swup/head-plugin": "^2.1.2",
+    "swup": "^4.4.2"
   }
 }
