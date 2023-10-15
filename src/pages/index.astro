@@ -1,25 +1,21 @@
 ---
 import Layout from "../layouts/Main.astro";
+import Links from "../components/Links.astro";
+import Radio from "../components/Radio.astro";
+import { resolveConfigPath } from "astro/dist/core/config";
 ---
 
 <Layout heading="Homepage" title="homepage" description="tyjubi project page">
 	<div class="section">
-		<p><img alt="watagashi unou" src="/assets/p.jpg" title="this is not yukino. this is watagashi unou." style="float:right; max-width:30%;"></img> This is the top secret personal website of "tyjubi", also known as "KirbyGamer67". I also used to go by "Calculator", or "karukureita". I like using a lot of different names online. "tyjubi" is "yukino" shifted one key to the left each on qwerty.</p>
+		<p><img alt="watagashi unou" src="/assets/p.jpg" style="float:right; max-width:30%;"></img> This is the top secret personal website of "tyjubi", also known as "KirbyGamer67". I also used to go by "Calculator", or "karukureita". I like using a lot of different names online. "tyjubi" is "yukino" shifted one key to the left each on qwerty.</p>
 		<p>I've been making indie games as a hobby for a while now, and all that stuff is over at my more public site <a href="https://onlytomorrow.net">onlytomorrow.net</a>. Currently, I'm working on an incremental game called <i>Idlenet</i>. I also have a game on Steam called <a href="https://store.steampowered.com/app/1328500/"><i>The Adventures of Crackhead Jack: Overdose Edition</i></a>.</p>
 		<p>I also run a private "vanilla" Minecraft server for myself and friends called "Admin Abusecraft". It's been running since 2016, and is currently on its 8th world.</p>
 	</div>
 	<div class="section">
-	<center>
-		<a href="https://twitter.com/ibujyt">twitter</a>
-		<a href="https://www.youtube.com/@karukureita4732">youtube</a>
-		<a href="https://github.com/onlytomorrow">github</a>
-		<a href="https://twitch.tv/tyjubi">twitch</a>
-		<a href="https://last.fm/user/rotaluclaC">lfm</a>
-		<hr style="width: 50%; color: #39303e"/>
-		<a href="https://steamcommunity.com/id/vfjekgd">steam</a>
-		<a href="https://onlytomorrow.net/acdl">abusecraft</a>
-		<a href="https://onlytomorrow.net">onlytomorrow</a>
-	</center>
+		<div class="link-container">
+			<Radio />
+			<Links />
+		</div>
 	</div>
 </Layout>
 

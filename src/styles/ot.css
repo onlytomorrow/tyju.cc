@@ -85,3 +85,43 @@ iframe#radio {
     padding: 16px;
     margin: 4% auto;
 }
+
+/* links + lfm np*/
+
+.radio {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 0.8ch;
+    margin-right: 0.8ch;
+    border: 1px solid #251a32;
+    background-color: #0a0812;
+    width: 66%;
+}
+.links {
+    display: flex;
+    align-items: center;
+    text-align: right;
+}
+.links ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 2ch;
+}
+.links li {
+    margin-right: 2ch;
+}
+.link-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.radio p {
+    font-size: 0.8em;
+    line-height: 1.1;
+    text-align: left;
+}
+.radio img {
+    margin-left: 1ch;
+    margin-right: 1ch;
+}
