@@ -5,15 +5,17 @@ import Nav from "../components/Nav.astro";
 import Webring from "../components/Webring.astro";
 const { heading, title, description } = Astro.props;
 ---
-
 <script>
-import Swup from 'swup';
-import SwupFadeTheme from '@swup/fade-theme';
-const swup = new Swup({
-    plugins: [new SwupFadeTheme()],
-});
+    import Swup from 'swup';
+    import SwupHeadPlugin from '@swup/head-plugin';
+    import SwupFadeTheme from '@swup/fade-theme';
+    const swup = new Swup();
+    swup.use(new SwupHeadPlugin());
+    swup.use(new SwupFadeTheme());
+    swup.hooks.on('animation:out:end', () => {
+        getNowPlaying();
+    });
 </script>
-
 <html>
     <head>
         <!-- Global Metadata -->
@@ -48,6 +50,7 @@ const swup = new Swup({
     </body>    
     <Webring />
 </html>
+
 
 <style>
     h2, h3, h4 {
