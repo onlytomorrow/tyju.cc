@@ -32,8 +32,8 @@ const { heading, title, description } = Astro.props;
     </head>
     <Nav />
     <body>
+        <h3 id="heading">{heading}</h3>
         <main id="swup" class="wrapper">
-            <h3>{heading}</h3>
             <slot />
         </main>
     </body>    

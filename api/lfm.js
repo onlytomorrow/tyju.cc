@@ -1,5 +1,4 @@
 export default async function handler(request, response) {
-    
     try{
         const lfmAPI = process.env.LAST_FM_API_KEY;
         const username = 'rotaluclac';
