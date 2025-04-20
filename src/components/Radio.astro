@@ -1,28 +1,27 @@
-<script>
-    async function getNowPlaying() {
-        const data = await fetch('/api/lfm',{
-            method: "GET",
-            headers: {
-                'Content-Type': 'application/json; charset=utf-8',
-                'Cache-Control': 'no-cache'
-            }
-        });
-        const response = await data.json();
-        document.getElementById("albumArt").src = response.albumArt;
-        document.getElementById("npArtist").textContent = response.artist;
-        document.getElementById("npTrack").textContent = response.track;
-        document.getElementById("npAlbum").textContent = response.album;
-    }
-    getNowPlaying();
-    setTimeout(getNowPlaying, 300000);
-</script>
+---
+export const prerender = false;
+const lfmAPI = import.meta.env.LAST_FM_API_KEY;
+const username = 'rotaluclac';
+const lfmResponse = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${lfmAPI}&format=json`,
+{
+    method: "GET",
+});
+const data = await lfmResponse.json();
+const recent = data.recenttracks.track[0];
+const np = {
+    artist: recent.artist['#text'],
+    track: recent.name,
+    album: recent.album['#text'],
+    albumArt: recent.image[1]['#text'],
+};
+---
 
 <div class="radio">
-    <img id="albumArt" src="" alt="..." width="64px"/>
+    <img src={np.albumArt} width="64px"/>
     <p>
-        <span><small><a href="https://last.fm/user/rotaluclac" style="color: gray; text-decoration: none;">recently listened to:</a></small></span><br>
-        <b><span id="npArtist">...</span></b><br>
-        <span id="npTrack">...</span><br>
-        <small style="color: gray">from </small><i><span id="npAlbum">...</span></i>
+        <small><a href="https://last.fm/user/rotaluclac" style="color: gray; text-decoration: none;">recently listened to:</a></small><br>
+        <b>{np.artist}</b> <br>
+        {np.track} <br>
+        <small style="color: gray">from </small><i>{np.album}</i>
     </p>
 </div>
