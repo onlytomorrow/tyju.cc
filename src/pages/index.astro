@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Main.astro";
 import Links from "../components/Links.astro";
-import Radio from "../components/Radio.astro";
+import Radio from "../components/Radio.svelte";
 ---
 
 <Layout heading="Homepage" title="home" description="tyjubi project page">
@@ -12,7 +12,7 @@ import Radio from "../components/Radio.astro";
 	</div>
 	<div class="section">
 		<div class="link-container">
-			<Radio />
+			<Radio client:load />
 			<Links />
 		</div>
 	</div>
