@@ -1,5 +1,5 @@
 ---
-import '@fontsource/source-serif-pro';
+import '@fontsource-variable/bitter';
 import '../styles/ot.css';
 import Nav from "../components/Nav.astro";
 import Webring from "../components/Webring.astro";
@@ -40,9 +40,9 @@ const { heading, title, description } = Astro.props;
     <Webring />
 </html>
 
-
 <style>
     h2, h3, h4 {
+        font-weight: 500;
         display: block;
         text-align: left;
         padding: 2%;
@@ -52,10 +52,10 @@ const { heading, title, description } = Astro.props;
         border-color: #27123b;
         background-color: #0e0613; /* if no gradient support */
         background-image: linear-gradient(to right, 
-                    rgba(13, 10, 15, 0.2), 
-                    rgb(20, 15, 25), 
-                    rgb(20, 15, 25),  
-                    rgb(20, 15, 25),
-                    rgba(13, 10, 15, 0.2));
+            rgba(13, 10, 15, 0.2), 
+            rgb(20, 15, 25), 
+            rgb(20, 15, 25),  
+            rgb(20, 15, 25),
+            rgba(13, 10, 15, 0.2));
     }
 </style>

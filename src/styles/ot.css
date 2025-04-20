@@ -5,44 +5,47 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Source Serif Pro', serif;
-    margin:0 auto;
-    max-width: 69ch;
+    font-family: 'Bitter Variable', serif;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 60ch;
     height: 100%;
-    line-height: 1.4;
+    line-height: 1.5;
     background: #0e0613 url("/assets/bg.png");
     color: #eeeeee;
 }
-p {
-    padding: 0.8ch;
-}
+
 a {
 	color:#d199ff;
 }
+
 a:visited {
 	color:#f188ff;
 }
+
 .section {
     display: block;
-    padding: 1ch;
-    margin: 2% auto;
+    padding: 0.4ch 2ch;
+    margin: 1ch auto;
     border-width: 3px;
     max-width: 69ch;
     border: 2px ridge;
     border-color: #27123b;
     background-color: #0e0613; /* if no gradient support */
     background-image: linear-gradient(to right, 
-                rgb(15, 10, 15), 
-                rgb(14, 10, 17), 
-                rgb(14, 10, 17), 
-                rgb(14, 10, 17), 
-                rgb(15, 10, 15));
+        rgb(15, 10, 15), 
+        rgb(14, 10, 17), 
+        rgb(14, 10, 17), 
+        rgb(14, 10, 17), 
+        rgb(15, 10, 15));
 }
-h1,h2,h3 {
+
+h2, h3 {
     color:#f2e6fe;
-    line-height: 1.2;
+    line-height: 1.1;
     text-align: center;
 }
+
 .video-container {
     position: relative;
     overflow: hidden;
@@ -93,7 +96,6 @@ iframe#radio {
     align-items: center;
     justify-content: left;
     margin-left: 0.8ch;
-    margin-right: 0.8ch;
     border: 1px solid #251a32;
     background-color: #0a0812;
     width: 66%;
@@ -107,11 +109,11 @@ iframe#radio {
 .links ul {
     list-style: none;
     padding: 0;
-    margin-left: 2ch;
+    margin-left: 1ch;
 }
 .links li {
     padding: 0.2ch;
-    margin-right: 2ch;
+    margin-right: 0.4ch;
 }
 .link-container {
 	display: flex;
@@ -120,10 +122,10 @@ iframe#radio {
 }
 .radio p {
     font-size: 0.8em;
-    line-height: 1.1;
+    line-height: 1.2;
     text-align: left;
 }
 .radio img {
-    margin-left: 1.5ch;
+    margin-left: 1ch;
     margin-right: 1ch;
 }
