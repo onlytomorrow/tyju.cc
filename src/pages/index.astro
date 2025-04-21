@@ -1,12 +1,14 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from "../layouts/Main.astro";
 import Links from "../components/Links.astro";
 import Radio from "../components/Radio.svelte";
+import imgNim from '../assets/nim.jpg';
 ---
 
 <Layout heading="Homepage" title="home" description="tyjubi project page">
 	<div class="section">
-		<p><img src="/assets/nim.jpg" style="float:right; max-width:25%;"></img> This is the top secret personal website of "tyjubi", also known as "KirbyGamer67". I also used to go by "Calculator", or "karukureita". I like using a lot of different names online. "tyjubi" is "yukino" shifted one key to the left each on qwerty.</p>
+        <p><Image src={imgNim} alt="nim"/> This is the top secret personal website of "tyjubi", also known as "KirbyGamer67". I also used to go by "Calculator", or "karukureita". I like using a lot of different names online. "tyjubi" is "yukino" shifted one key to the left each on qwerty.</p>
         <p>I've been making indie games as a hobby for a while now. You can buy my first commercial game <a href="https://store.steampowered.com/app/1328500/"><i>The Adventures of Crackhead Jack: Overdose Edition</i></a> on Steam. Currently, I'm working on an incremental game called <i>Idlenet</i>. You can read about my various projects <a href="/projects/">here</a>. Check out my other public site <a href="https://onlytomorrow.net">onlytomorrow.net</a> to view a fancy Steam banner for Crackhead Jack.</p>
 		<p>I also run a private "vanilla" Minecraft server for myself and friends called "Admin Abusecraft". It's been running since 2016, and is currently on its 9th world.</p>
 	</div>
@@ -21,13 +23,15 @@ import Radio from "../components/Radio.svelte";
 </Layout>
 
 <style>
-img {
-    float: right;
-    max-width: 30%;
-	padding: 0.6ch;
-	margin-left: 1ch;
-	margin-bottom: 0.4ch;
-    border: 1px solid #4e386a;
-    background-color: #1c1532;
-}
+    img {
+        float: right;
+        padding: 0.6ch;
+        width: 25%;
+        height: 25%;
+        margin-left: 1ch;
+        margin-bottom: 0.4ch;
+        border: 1px solid;
+        border-color: #331b80;
+        background-color: #1c1532;
+    }
 </style>

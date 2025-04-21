@@ -1,10 +1,10 @@
-/* border box */
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Bitter Variable', serif;
     font-size: 16px;
     margin: 0 auto;
@@ -15,14 +15,6 @@ body{
     color: #eeeeee;
 }
 
-a {
-	color:#d199ff;
-}
-
-a:visited {
-	color:#f188ff;
-}
-
 .section {
     display: block;
     padding: 0.4ch 2ch;
@@ -30,7 +22,7 @@ a:visited {
     border-width: 3px;
     max-width: 69ch;
     border: 2px ridge;
-    border-color: #27123b;
+    border-color: #331b80;
     background-color: #0e0613; /* if no gradient support */
     background-image: linear-gradient(to right, 
         rgb(15, 10, 15), 
@@ -40,90 +32,63 @@ a:visited {
         rgb(15, 10, 15));
 }
 
-h2, h3 {
-    color:#f2e6fe;
-    line-height: 1.1;
-    text-align: center;
+a {
+	color: #b29aff;
+    text-decoration: none;
 }
 
-.video-container {
-    position: relative;
-    overflow: hidden;
-    height: 0;
-    padding-bottom: 56.25%; /* creates a 16:9 aspect ratio */
+a:visited {
+	color: #b268ff;
+    text-decoration: none;
 }
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-}
-.video-wrap {
-    width: 100%;
-    max-width: 600px;
-}
-.steam-container {
-    position: relative;
-    overflow: hidden;
-    height: 0;
-    padding-bottom: 28%;
-}
-.steam-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-}
-.steam-wrap {
-    width: 100%;
-    max-width: 725px;
-}
-iframe#radio {
-    border: 4px inset;
-    background-color: #070D13;
-    padding: 16px;
-    margin: 4% auto;
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* links + lfm np*/
+
+.link-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.radio p {
+    font-size: 0.8em;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.radio img {
+    margin-left: 1ch;
+    margin-right: 1ch;
+}
 
 .radio {
     display: flex;
     align-items: center;
     justify-content: left;
-    border: 1px solid #251a32;
+    border: 1px solid;
+    border-color: #331b80;
     background-color: #0a0812;
     width: 66%;
 }
+
 .links {
     display: flex;
     align-items: center;
     text-align: right;
     line-height: 1.1;
 }
+
 .links ul {
     list-style: none;
     padding: 0;
     margin-left: 1ch;
 }
+
 .links li {
     padding: 0.2ch;
 }
-.link-container {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-.radio p {
-    font-size: 0.8em;
-    line-height: 1.2;
-    text-align: left;
-}
-.radio img {
-    margin-left: 1ch;
-    margin-right: 1ch;
-}
+
