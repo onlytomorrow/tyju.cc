@@ -95,7 +95,6 @@ iframe#radio {
     display: flex;
     align-items: center;
     justify-content: left;
-    margin-left: 0.8ch;
     border: 1px solid #251a32;
     background-color: #0a0812;
     width: 66%;
@@ -113,7 +112,6 @@ iframe#radio {
 }
 .links li {
     padding: 0.2ch;
-    margin-right: 0.4ch;
 }
 .link-container {
 	display: flex;
