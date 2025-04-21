@@ -9,7 +9,6 @@ async function getNowPlaying() {
             }
         });
     const data = await lfmResponse.json();
-    console.log(data);
     return {
         artist: data.artist,
         track: data.track,
@@ -19,14 +18,14 @@ async function getNowPlaying() {
 }
 </script>
 
-{#await getNowPlaying() then np}
-<div class="radio">
-    <img src={np.albumArt} width="64px"/>
+{#await getNowPlaying()}
+    <p style="margin: 4ch; color: #aaaaaa"><em>listening...</em></p>
+{:then np}
+    <img alt="album art" src={np.albumArt} width="64px"/>
     <p>
         <small><a href="https://last.fm/user/rotaluclac" style="color: gray; text-decoration: none;">recently listened to:</a></small><br>
         <b>{np.artist}</b> <br>
         {np.track} <br>
         <small style="color: gray">from </small> <i>{np.album}</i>
     </p>
-</div>
 {/await}
