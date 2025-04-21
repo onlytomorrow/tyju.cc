@@ -1,25 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import btnTyju from '../assets/btn/tyju.png'; 
+import btnSdmc from '../assets/btn/staydown.png';
+import btnTmrw from '../assets/btn/tmrw.png';
+import btnJack from '../assets/btn/chj.png'; 
+import btnChrome from '../assets/btn/chrome.gif'; 
+import btnFirefox from '../assets/btn/ff.gif';
+import btnFlash from '../assets/btn/flashpoint.png';
+import btnNuke from '../assets/btn/ienuke.gif';
+import btnMiku from '../assets/btn/miku.gif';
+import btnVim from '../assets/btn/vim.gif';
+---
+
 <center>
 <p id="buttons">
-    <img src="/assets/tyju-btn.png"></img>
-    <a href="https://staydown.money"><img src="/assets/staydown.png"></img></a>
-	<img src="/assets/ienuke.gif"></img>
-	<img src="/assets/miku.gif"></img>
-	<img src="/assets/chrome.gif"></img>
-    <img src="/assets/nya.gif"></img>
+    <a href="https://tyju.cc"><img src={btnTyju.src} height=31 alt="tyju.cc"/></a>
+    <a href="https://staydown.money"><img src={btnSdmc.src} height=31 alt="staydown.money"/></a>
+    <img src={btnVim.src} height=31 alt=""/>
+    <img src={btnNuke.src} height=31 alt=""/>
+    <img src={btnChrome.src} height=31 alt=""/>
 </p>
-<p>
-    <i>this site is part of the <a href='https://staydown.money/'>staydown.money</a> webring</i>
-    [<a href='https://staydown.money/wr?prev=https://tyju.cc/'>&lt;-&nbsp; prev</a> | <a href='https://staydown.money/wr?random=https://tyju.cc/'>random</a> | <a href='https://staydown.money/wr?next=https://tyju.cc/'>next &nbsp;-&gt;</a>]
+<p id="buttons">
+    <span>
+        <a href="https://onlytomorrow.net"><img src={btnTmrw.src}/></a>
+        <a href="https://store.steampowered.com/app/1328500/"><img src={btnJack.src}/></a>
+    </span>
+    <img src={btnMiku.src} height=31 alt=""/>
+    <a href="https://flashpointarchive.org/"><img src={btnFlash.src} height=31 alt=""/></a>
+    <a href="https://www.mozilla.org/en-US/firefox/new/"><img src={btnFirefox.src} height=31 alt=""/></a>
+</p>
+<p style="line-height: 1.2;">
+    this site is part of the <a href='https://staydown.money/'>staydown.money</a> webring
+    &lt;&nbsp;<a href='https://staydown.money/wr?prev=https://tyju.cc/'>prev</a> -
+    <a href='https://staydown.money/wr?random=https://tyju.cc/'>random</a> -
+    <a href='https://staydown.money/wr?next=https://tyju.cc/'>next</a>&nbsp;&gt;
+    <br>
+    <small style="color: #494455;">contact: kirby(a)onlytomorrow.net</small>
 </p>
 </center>
 
 <style>
+#buttons {
+    display: flex;
+    justify-content: center;
+    line-height: 0;
+    column-gap: 1px;
+    row-gap: 1px;
+    margin-top: 0;
+    margin-bottom: 1px;
+}
+
 p {
     font-size: small;
     color: #666;
 }
 
+span {
+    display: flex;
+    flex-direction: column;
+    column-gap: 1px;
+}
+
+img {
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -webkit-optimize-contrast;
+}
+
 a, a:visited {
-    color: #7b678f;
+    color: #8574bf;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 </style>
