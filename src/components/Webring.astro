@@ -5,18 +5,18 @@ import btnSdmc from '../assets/btn/staydown.png';
 import btnTmrw from '../assets/btn/tmrw.png';
 import btnJack from '../assets/btn/chj.png'; 
 import btnChrome from '../assets/btn/chrome.gif'; 
-import btnFirefox from '../assets/btn/ff.gif';
+import btnGoth from '../assets/btn/gothzip.png';
 import btnFlash from '../assets/btn/flashpoint.png';
 import btnNuke from '../assets/btn/ienuke.gif';
 import btnMiku from '../assets/btn/miku.gif';
-import btnVim from '../assets/btn/vim.gif';
+import btnHelix from '../assets/btn/helix.png';
 ---
 
 <center>
 <p id="buttons">
     <a href="https://tyju.cc"><img src={btnTyju.src} height=31 alt="tyju.cc"/></a>
     <a href="https://staydown.money"><img src={btnSdmc.src} height=31 alt="staydown.money"/></a>
-    <img src={btnVim.src} height=31 alt=""/>
+    <a href="https://goth.zip"><img src={btnGoth.src} height=31 alt=""/></a>
     <img src={btnNuke.src} height=31 alt=""/>
     <img src={btnChrome.src} height=31 alt=""/>
 </p>
@@ -25,9 +25,9 @@ import btnVim from '../assets/btn/vim.gif';
         <a href="https://onlytomorrow.net"><img src={btnTmrw.src}/></a>
         <a href="https://store.steampowered.com/app/1328500/"><img src={btnJack.src}/></a>
     </span>
-    <img src={btnMiku.src} height=31 alt=""/>
     <a href="https://flashpointarchive.org/"><img src={btnFlash.src} height=31 alt=""/></a>
-    <a href="https://www.mozilla.org/en-US/firefox/new/"><img src={btnFirefox.src} height=31 alt=""/></a>
+    <a href="https://helix-editor.com"><img src={btnHelix.src} height=31 alt=""/></a>
+    <img src={btnMiku.src} height=31 alt=""/>
 </p>
 <p style="line-height: 1.2;">
     this site is part of the <a href='https://staydown.money/'>staydown.money</a> webring
@@ -42,6 +42,7 @@ import btnVim from '../assets/btn/vim.gif';
 <style>
 #buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     line-height: 0;
     column-gap: 1px;
